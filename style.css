@@ -7,7 +7,6 @@
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-style: normal;
-  font-size: 15px;
 }
 
 :root {
@@ -38,7 +37,7 @@
   width: 55px;
   height: 50px;
   margin: 5px 2px;
-  padding: 4px;
+  padding: 7px;
   border: 1px solid rgb(131, 127, 112);
   border-radius: 5px;
   box-shadow: 2px 0px 17px 0px #7e826f;
@@ -70,17 +69,23 @@
 #volume {
   width: 55px;
   height: 55px;
-  box-shadow: 0px 0px 17px 0px #7e826f;
+  background: radial-gradient(
+    ellipse at center,
+    #cccab4 0%,
+    #faf6dd 50%,
+    #faf6dd 100%
+  );
+  box-shadow: 2px 2px 30px 0px #43453a;
   border: 1px solid rgb(131, 127, 112);
   border-radius: 100%;
 }
 
-#back-space {
-  width: 125px;
+#volume:hover {
+  animation: spin 3s linear infinite;
 }
 
-#space-bar {
-  width: 40%;
+#back-space {
+  width: 125px;
 }
 
 #tab,
@@ -94,8 +99,21 @@
   width: 120px;
 }
 
+#space-bar {
+  width: 40%;
+}
+
 .linha-lateral {
   margin-left: 15px;
+}
+
+#seta-cima,
+#seta-esquerda,
+#seta-direita,
+#seta-baixo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #seta-cima {
@@ -104,4 +122,25 @@
 
 #seta-esquerda {
   margin-left: 20px;
+}
+
+.fonte-menor {
+  font-size: 10px;
+}
+
+.fonte-normal {
+  font-size: 13px;
+}
+
+img {
+  width: 20px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
